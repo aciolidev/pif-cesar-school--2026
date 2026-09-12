@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main() {
+    int opcao;
+    float lado, base, altura, area;
+
+    printf("CALCULO DE AREAS\n");
+    printf("1 - Quadrado\n");
+    printf("2 - Retangulo\n");
+    printf("3 - Triangulo Retangulo\n");
+    printf("Escolha uma opcao: ");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+        case 1:
+            printf("Digite o lado do quadrado: ");
+            scanf("%f", &lado);
+
+            area = lado * lado;
+            printf("Area do quadrado: %.2f\n", area);
+            break;
+
+        case 2:
+            printf("Digite a base do retangulo: ");
+            scanf("%f", &base);
+
+            printf("Digite a altura do retangulo: ");
+            scanf("%f", &altura);
+
+            area = base * altura;
+            printf("Area do retangulo: %.2f\n", area);
+            break;
+
+        case 3:
+            printf("Digite a base do triangulo: ");
+            scanf("%f", &base);
+
+            printf("Digite a altura do triangulo: ");
+            scanf("%f", &altura);
+
+            area = (base * altura) / 2;
+            printf("Area do triangulo retangulo: %.2f\n", area);
+            break;
+
+        default:
+            printf("Opcao invalida!\n");
+    }
+
+    return 0;
+}
